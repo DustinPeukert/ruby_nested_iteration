@@ -10,4 +10,14 @@ class Course
   def add_student(student)
     @students << student
   end
+
+  def groups_represented
+    groups = []
+
+    @students.each do |student|
+      groups << student.group
+    end
+
+    groups.uniq!
+  end
 end
